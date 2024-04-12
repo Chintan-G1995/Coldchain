@@ -1,0 +1,98 @@
+App.jsx
+import React from 'react'
+import { BrowserRouter, Routes,Route } from 'react-router-dom'
+import Nav from './components/Nav'
+import Home from './components/Home'
+import "./App.css"
+import Cart from './components/Cart'
+import Logo from './components/Logo'
+
+const App = () => {
+  return (
+   <BrowserRouter>  
+   <Nav></Nav>
+   <Routes>
+     <Route path='/' element={<Home></Home>}>HOME</Route>
+     <Route path='/darshan' element={<Cart></Cart>}>CART</Route>
+     <Route path='/Logo' element={<Logo></Logo>}>LOGO</Route>
+   </Routes>
+   </BrowserRouter>
+  )
+}
+
+export default App
+===============================
+import React from 'react'
+
+const Cart = () => {
+  return (
+    <div>
+        <h1>this is cart page</h1>
+    </div>
+  )
+}
+
+export default Cart
+==========================
+import React from 'react'
+
+const Home = () => {
+  return (
+    <div>
+        <h1>this is home page</h1>
+    </div>
+  )
+}
+
+export default Home
+===========
+import React from 'react'
+
+const Logo = () => {
+  return (
+    <div>Logo</div>
+  )
+}
+
+export default Logo
+========================
+import React from 'react'
+
+import { Link } from 'react-router-dom'
+
+const Nav = () => {
+  return (
+    <div>
+        <nav id='max'>
+          <Link to='/'>HOME</Link>
+          <Link to='/darshan'>CART</Link>
+          <Link to='/Logo'>LOGO</Link>
+        
+
+        </nav>
+    </div>
+  )
+}
+
+export default Nav
+======================
+App.css
+#max{
+  border: 1px solid blue;
+  height: 100px;
+  background-color: grey;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.rio{
+  border: 1px solid red;
+  height: 50px;
+  width: 100px;
+}
+
+
+
+-------
+====
